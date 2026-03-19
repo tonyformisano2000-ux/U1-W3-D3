@@ -23,25 +23,25 @@ const formSubmitFunction = function (e) {
   card.classList.add('contact-card') // <article class="contact-card"></article>
   // 3) ora lo riempiamo con i dati recuperati dal form!
   // 3-a) creando fisicamente la struttura a "matrioska"
-  //   const firstP = document.createElement('p')
-  //   firstP.innerText = `${nome} ${cognome}`
-  //   const secondP = document.createElement('p')
-  //   secondP.innerText = `${telefono}`
-  //   // ora li appendiamo nella card
-  //   card.appendChild(firstP)
-  //   card.appendChild(secondP)
-  //   //   ora, infine, appendo la card alla sezione dedicata nell'HTML (id "saved-contacts")
-  //   const section = document.getElementById('saved-contacts')
-  //   section.appendChild(card)
+    const firstP = document.createElement('p')
+    firstP.innerText = `${nome} ${cognome}`
+    const secondP = document.createElement('p')
+    secondP.innerText = `${telefono}`
+    // ora li appendiamo nella card
+    card.appendChild(firstP)
+    card.appendChild(secondP)
+    //   ora, infine, appendo la card alla sezione dedicata nell'HTML (id "saved-contacts")
+    const section = document.getElementById('saved-contacts')
+    section.appendChild(card)
   // 3-b) manipolando direttamente l'HTML di saved-contacts
-  const section = document.getElementById('saved-contacts')
-  section.innerHTML += `
-        <article class="contact-card">
-            <p>${nome} ${cognome}</p>
-            <p>${telefono}</p>
-            <button onclick="deleteCard(event)">🗑️ ELIMINA</button>
-        </article>
-    `
+//   const section = document.getElementById('saved-contacts')
+//   section.innerHTML += `
+//         <article class="contact-card">
+//             <p>${nome} ${cognome}</p>
+//             <p>${telefono}</p>
+//             <button onclick="deleteCard(event)">🗑️ ELIMINA</button>
+//         </article>
+//     `
   form.reset()
 }
 

@@ -18,9 +18,9 @@
     <header><h1>Productivity Center</h1></header>
     <main>
       <h3>write each of your tasks down here:</h3>
-      <form>
-        <input placeholder="Insert Task" />
-        <button type="submit" onclick="submit(element)">ENTER</button>
+      <form onsubmit="pappardelle(event)" id="form">
+        <input placeholder="Insert Task" id="enterIt" />
+        <button type="submit">ENTER</button>
       </form>
       <section id="tasks">
         <h3>To Do List:</h3>
